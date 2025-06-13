@@ -3,6 +3,8 @@ function PlotDataOptogenwAnimalNames(root, resdir, NoDupesSafeData, NoDupesScary
 
 dbstop if error
 
+Table=PlacePreferenceTestBehaviourConsolidationTableDuplicatesRemoved;
+
 % Extract groups
 ScaryGFPIndex = cell2mat(cellfun(@(x) contains(x,'Control'), NoDupesScaryData.ControlOrNot, 'UniformOutput', 0));
 ScaryGFPData = NoDupesScaryData(ScaryGFPIndex,:);
